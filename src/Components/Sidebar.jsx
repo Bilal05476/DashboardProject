@@ -1,4 +1,3 @@
-import AccountCircleIcon from "@material-ui/icons/AccountCircle";
 import ArrowDropDownIcon from "@material-ui/icons/ArrowDropDown";
 import ArrowForwardIosIcon from "@material-ui/icons/ArrowForwardIos";
 import DashboardIcon from "@material-ui/icons/Dashboard";
@@ -11,7 +10,7 @@ import ContactsIcon from "@material-ui/icons/Contacts";
 import ListIcon from "@material-ui/icons/List";
 import PersonIcon from "@material-ui/icons/Person";
 import Popover from "@material-ui/core/Popover";
-import Typography from "@material-ui/core/Typography";
+
 import Button from "@material-ui/core/Button";
 import { useState } from "react";
 import { auth } from "../Firebase";
@@ -20,8 +19,7 @@ import { useStateValue } from "./StateProvider";
 import "./css/sidebar.css";
 
 const Sidebar = () => {
-  const [{ user }] = useStateValue();
-  const [{}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) => {
@@ -53,7 +51,7 @@ const Sidebar = () => {
   return (
     <div className="sidebar">
       <div className="account__details">
-        <img className="avatar" src={user?.photoURL} />
+        <img className="avatar" src={user?.photoURL} alt="userphoto" />
         <h6>{user?.displayName}</h6>
         <Button
           style={{ outline: "none" }}

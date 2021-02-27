@@ -8,8 +8,7 @@ import { useEffect } from "react";
 import "./css/Login.css";
 
 const Login = () => {
-  const [{ user }] = useStateValue();
-  const [{}, dispatch] = useStateValue();
+  const [{ user }, dispatch] = useStateValue();
   const googleSignIn = (e) => {
     e.preventDefault();
     auth
