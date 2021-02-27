@@ -10,19 +10,24 @@ const DashBoardProject = () => {
   const [{ user }] = useStateValue();
   return (
     <>
-      <AppNavbar />
-
-      <div className="dash">
-        <div className="sidebarComp">
-          <Sidebar />
-        </div>
-        <div className="dashComp">
-          <Dashboard />
-        </div>
-      </div>
-      <div className="bottomNavComp">
-        <BottomNav />
-      </div>
+      {!user ? (
+        <Login />
+      ) : (
+        <>
+          <AppNavbar />
+          <div className="dash">
+            <div className="sidebarComp">
+              <Sidebar />
+            </div>
+            <div className="dashComp">
+              <Dashboard />
+            </div>
+          </div>
+          <div className="bottomNavComp">
+            <BottomNav />
+          </div>
+        </>
+      )}
     </>
   );
 };

@@ -14,10 +14,15 @@ import Popover from "@material-ui/core/Popover";
 import Typography from "@material-ui/core/Typography";
 import Button from "@material-ui/core/Button";
 import { useState } from "react";
+import { auth } from "../Firebase";
+import { useStateValue } from "./StateProvider";
 
 import "./css/sidebar.css";
 
 const Sidebar = () => {
+  const [{ user }] = useStateValue();
+  const [{}, dispatch] = useStateValue();
+
   const [anchorEl, setAnchorEl] = useState(null);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
@@ -30,11 +35,26 @@ const Sidebar = () => {
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
 
+  const signOut = (e) => {
+    e.preventDefault();
+    auth
+      .signOut()
+      .then((result) => {
+        dispatch({
+          type: "SET_USER",
+          user: result,
+        });
+      })
+      .catch((error) => {
+        alert(error);
+      });
+  };
+
   return (
     <div className="sidebar">
       <div className="account__details">
-        <AccountCircleIcon />
-        <h6>Bilal Ahmed</h6>
+        <img className="avatar" src={user?.photoURL} />
+        <h6>{user?.displayName}</h6>
         <Button
           style={{ outline: "none" }}
           aria-describedby={id}
@@ -56,7 +76,9 @@ const Sidebar = () => {
             horizontal: "center",
           }}
         >
-          <Typography className="p-2">Logout</Typography>
+          <Button onClick={signOut} className="logoutBtn p-2">
+            Logout
+          </Button>
         </Popover>
       </div>
 
