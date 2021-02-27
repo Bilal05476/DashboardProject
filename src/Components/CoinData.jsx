@@ -1,17 +1,17 @@
 const CoinData = [
   {
     coin: "Bitcoin",
-    price: 9626,
+    price: "9,626",
     percentage: 76,
   },
   {
     coin: "Etherium",
-    price: 7831,
+    price: "7,831",
     percentage: 7,
   },
   {
     coin: "Ripple Price",
-    price: 1234,
+    price: "1,234",
     percentage: 8,
   },
   {

@@ -10,16 +10,54 @@ import ChatIcon from "@material-ui/icons/Chat";
 import ContactsIcon from "@material-ui/icons/Contacts";
 import ListIcon from "@material-ui/icons/List";
 import PersonIcon from "@material-ui/icons/Person";
+import Popover from "@material-ui/core/Popover";
+import Typography from "@material-ui/core/Typography";
+import Button from "@material-ui/core/Button";
+import { useState } from "react";
 
 import "./css/sidebar.css";
 
 const Sidebar = () => {
+  const [anchorEl, setAnchorEl] = useState(null);
+  const handleClick = (event) => {
+    setAnchorEl(event.currentTarget);
+  };
+
+  const handleClose = () => {
+    setAnchorEl(null);
+  };
+
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
+
   return (
     <div className="sidebar">
       <div className="account__details">
         <AccountCircleIcon />
         <h6>Bilal Ahmed</h6>
-        <ArrowDropDownIcon className="drop" />
+        <Button
+          style={{ outline: "none" }}
+          aria-describedby={id}
+          onClick={handleClick}
+        >
+          <ArrowDropDownIcon className="drop text-light" />
+        </Button>
+        <Popover
+          id={id}
+          open={open}
+          anchorEl={anchorEl}
+          onClose={handleClose}
+          anchorOrigin={{
+            vertical: "bottom",
+            horizontal: "center",
+          }}
+          transformOrigin={{
+            vertical: "top",
+            horizontal: "center",
+          }}
+        >
+          <Typography className="p-2">Logout</Typography>
+        </Popover>
       </div>
 
       <div className="main">
@@ -37,7 +75,7 @@ const Sidebar = () => {
           </div>
         </div>
         <div className="secondChild">
-          <h6>Crypto</h6>
+          <h6 className="text-light">Crypto</h6>
           <h6>Listing</h6>
           <h6>Crm</h6>
           <h6>Intranet</h6>

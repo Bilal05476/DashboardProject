@@ -61,40 +61,6 @@ export default function Dashboard() {
               </Paper>
             </div>
           ))}
-
-          {/* <div className="col-lg-6 col-xl-3 column">
-            <Paper className="heading">
-              <Typography className="typo">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English.
-              </Typography>
-            </Paper>
-          </div>
-          <div className="col-lg-6 col-xl-3 column">
-            <Paper className="heading">
-              <Typography className="typo">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English.
-              </Typography>
-            </Paper>
-          </div>
-          <div className="col-lg-6 col-xl-3 column">
-            <Paper className="heading">
-              <Typography className="typo">
-                It is a long established fact that a reader will be distracted
-                by the readable content of a page when looking at its layout.
-                The point of using Lorem Ipsum is that it has a more-or-less
-                normal distribution of letters, as opposed to using 'Content
-                here, content here', making it look like readable English.
-              </Typography>
-            </Paper>
-          </div> */}
         </div>
 
         <div className="row">
@@ -104,7 +70,7 @@ export default function Dashboard() {
                 <Typography className="balanceHeading">
                   Your Portfolio Balance
                 </Typography>
-                <h4 className="my-2 money">$179,626</h4>
+                <h4 className="my-2 money">$179</h4>
                 <small className="text-muted">overall balance</small>
                 <br />
                 <ButtonGroup>
@@ -165,51 +131,55 @@ export default function Dashboard() {
                 </small>
               </div>
               <table className="table">
-                <tr className="tableHeader">
-                  <th>Acount Holder Name</th>
-                  <th>Last Transfer</th>
-                  <th>Action</th>
-                </tr>
-                <tr>
-                  <td>Bilal</td>
-                  <td>17 days ago</td>
-                  <td style={{ color: "rgb(4, 80, 221)" }}>
-                    <SendIcon />
-                    pay
-                  </td>
-                </tr>
-                <tr>
-                  <td>Ahmed</td>
-                  <td>7 days ago</td>
-                  <td style={{ color: "rgb(4, 80, 221)" }}>
-                    <SendIcon />
-                    pay
-                  </td>
-                </tr>
-                <tr>
-                  <td>Aamir</td>
-                  <td>5 days ago</td>
-                  <td style={{ color: "rgb(4, 80, 221)" }}>
-                    <SendIcon />
-                    pay
-                  </td>
-                </tr>
-                <tr>
-                  <td>Samad</td>
-                  <td>10 days ago</td>
-                  <td style={{ color: "rgb(4, 80, 221)" }}>
-                    <SendIcon />
-                    pay
-                  </td>
-                </tr>
-                <tr>
-                  <td>Saim</td>
-                  <td>9 days ago</td>
-                  <td style={{ color: "rgb(4, 80, 221)" }}>
-                    <SendIcon />
-                    pay
-                  </td>
-                </tr>
+                <thead>
+                  <tr className="tableHeader">
+                    <th>Acount Holder Name</th>
+                    <th>Last Transfer</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Lily</td>
+                    <td>5 days ago</td>
+                    <td style={{ color: "rgb(4, 80, 221)" }}>
+                      <SendIcon />
+                      pay
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Raj</td>
+                    <td>7 days ago</td>
+                    <td style={{ color: "rgb(4, 80, 221)" }}>
+                      <SendIcon />
+                      pay
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Aamir</td>
+                    <td>9 days ago</td>
+                    <td style={{ color: "rgb(4, 80, 221)" }}>
+                      <SendIcon />
+                      pay
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Samad</td>
+                    <td>15 days ago</td>
+                    <td style={{ color: "rgb(4, 80, 221)" }}>
+                      <SendIcon />
+                      pay
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>Saim</td>
+                    <td>19 days ago</td>
+                    <td style={{ color: "rgb(4, 80, 221)" }}>
+                      <SendIcon />
+                      pay
+                    </td>
+                  </tr>
+                </tbody>
               </table>
             </Paper>
           </div>
@@ -220,11 +190,7 @@ export default function Dashboard() {
               <small className="text-center my-2">
                 Refer us your friends and earn exciting gifts when they join
               </small>
-              <Button
-                className="my-2 referBtn"
-                variant="contained"
-                color="primary"
-              >
+              <Button className="my-2 referBtn" variant="contained">
                 Invite Friends
               </Button>
             </Paper>
@@ -232,9 +198,9 @@ export default function Dashboard() {
           <div className="col-md-6 col-lg-4 column">
             <Paper className="heading currencyCal">
               <Typography className="py-1">Currency Calculator</Typography>
-              <small className="py-2">1 USD equals</small>
-              <h4 className="money">159.65 PKR</h4>
-              <small className="text-muted">@ 1 PKR = 159.65</small>
+              <small className="py-2">1 BTC equals</small>
+              <h4 className="money">46,385.00 USD</h4>
+              <small className="text-muted">@ 1 BTC = 46,385.00</small>
               <form>
                 <FormControl className="formControl mx-2 my-1">
                   <InputLabel id="from">From</InputLabel>

@@ -3,8 +3,6 @@ import { Line } from "react-chartjs-2";
 
 const data = {
   labels: [
-    "JAN",
-    "FEB",
     "MAR",
     "APR",
     "MAY",
@@ -15,14 +13,16 @@ const data = {
     "OCT",
     "NOV",
     "DEC",
+    "JAN",
+    "FEB",
   ],
   datasets: [
     {
-      label: "history",
+      label: "history (yearly)",
       data: [122, 119, 320, 125, 220, 310, 232, 219, 320, 225, 340, 310],
       fill: true,
-      backgroundColor: "rgba(107, 157, 248, 0.5)",
-      borderColor: "rgb(4, 80, 221) ",
+      backgroundColor: ["rgba(107, 157, 248, 0.5)"],
+      borderColor: "rgb(4, 80, 221)",
     },
   ],
 };

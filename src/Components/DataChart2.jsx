@@ -18,9 +18,10 @@ const data = {
   ],
   datasets: [
     {
-      data: [122, 119, 320, 125, 220, 310, 232, 219, 320, 225, 340, 310],
+      label: "analytics (yearly)",
+      data: [222, 129, 220, 155, 120, 310, 232, 219, 320, 215, 140, 310],
       fill: true,
-      backgroundColor: "rgba(110, 1, 160, 0.425)",
+      backgroundColor: ["rgba(110, 1, 160, 0.425)"],
       borderColor: "rgb(110, 1, 160) ",
     },
   ],

@@ -1,0 +1,21 @@
+.login {
+  padding: 15rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f1f1f1;
+  height: 100%;
+}
+.loginDetails {
+  display: flex;
+  flex-direction: column;
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.googleBtn {
+  background-color: rgb(170, 11, 11) !important;
+  color: #fff !important;
+  outline: none !important;
+}
